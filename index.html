@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -40,9 +39,14 @@
             display: flex;
             justify-content: center;
             background-color: orange;
-            padding: 10px;
+            padding: 8px 0;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            top: -10px; /* Moves the strip upwards */
+            width: 100%; /* Ensures it spans the full width of the screen */
+            transform: TranslateY(-120px);
         }
+
 
         nav a {
             color: white;
@@ -56,6 +60,16 @@
         nav a:hover {
             color: yellow;
             text-decoration: underline;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 10px auto; /* Reduced the top margin */
+            padding: 20px;
+            background-color: #643C0F;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            color: #e3e3e3;
         }
 
         section h2 {
@@ -113,18 +127,8 @@
             margin: 10px 0;
         }
 
-        section {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #643C0F;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            color: #e3e3e3;
-        }
-
         #news {
-            margin: 20px auto;
+            margin: 10px auto; /* Reduced the top margin */
             padding: 20px;
             background: linear-gradient(90deg, #C9A26B, #643C0F);
             border-radius: 12px;
@@ -152,7 +156,6 @@
             nav a {
                 font-size: 0.9rem;
                 margin: 0 10px;
-                width: 1920px;
             }
 
             section h2 {
@@ -189,7 +192,7 @@
         }
 
         #services {
-                text-align: center;
+            text-align: center;
         }
     </style>
 </head>
@@ -206,38 +209,38 @@
         <a href="#contact">تواصل معنا</a>
         <a href="#about">من نحن</a>
     </nav>
+    <div style="transform: TranslateY(-120px);">
+        <section id="news">
+            <h2>آخر أخبارنا</h2>
+            <p>بحمد الله وتوفيقه، قد نجحنا اليوم في أخذ حكم تعويض قدره سبعميت ألف جنيه لصالح موكلنا السيد/إبرهيم علي حسن تعويضًا عن إصابته في حادث مروري.</p>
+        </section>
+        <div>
+        <section id="about">
+            <h2>من نحن</h2>
+            <div class="image-container">
+                <img src="images/office.jpg" alt="المحامي محمود كمال حامد في مكتبه">
+            </div>
+            <p>مكتب محمود كمال حامد للمحاماة يقدم خدمات قانونية متطورة باستخدام أحدث الأدوات التقنية لضمان تحقيق العدالة بكفاءة ودقة.</p>
+        </section>
 
-    <section id="news">
-        <h2>آخر أخبارنا</h2>
-        <p>بحمد الله وتوفيقه، قد نجحنا اليوم في أخذ حكم تعويض قدره سبعميت ألف جنيه لصالح موكلنا السيد/إبرهيم علي حسن تعويضًا عن إصابته في حادث مروري.</p>
-    </section>
+        <section id="services">
+            <h2>خدماتنا</h2>
+            <ul>
+                <li>الاستشارات القانونية الذكية</li>
+                <li>حل النزاعات باستخدام تقنيات التفاوض الحديثة</li>
+                <li>إدارة العقود الإلكترونية</li>
+                <li>الدفاع الجنائي باستخدام البيانات والتحليلات</li>
+                <li>حماية الملكية الفكرية الرقمية</li>
+            </ul>
+        </section>
 
-    <section id="about">
-        <h2>من نحن</h2>
-        <div class="image-container">
-            <img src="images/office.jpg" alt="المحامي محمود كمال حامد في مكتبه">
-        </div>
-        <p>مكتب محمود كمال حامد للمحاماة يقدم خدمات قانونية متطورة باستخدام أحدث الأدوات التقنية لضمان تحقيق العدالة بكفاءة ودقة.</p>
-    </section>
-
-    <section id="services">
-        <h2>خدماتنا</h2>
-        <ul>
-            <li>الاستشارات القانونية الذكية</li>
-            <li>حل النزاعات باستخدام تقنيات التفاوض الحديثة</li>
-            <li>إدارة العقود الإلكترونية</li>
-            <li>الدفاع الجنائي باستخدام البيانات والتحليلات</li>
-            <li>حماية الملكية الفكرية الرقمية</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>تواصل معنا</h2>
-        <p>للحصول على استشارة قانونية تقنية أو تحديد موعد:</p>
-        <p>الهاتف: 123-456-789</p>
-        <p>البريد الإلكتروني: info@mahmoudlawoffice.com</p>
-    </section>
-
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+            <p>للحصول على استشارة قانونية تقنية أو تحديد موعد:</p>
+            <p>الهاتف: 123-456-789</p>
+            <p>البريد الإلكتروني: info@mahmoudlawoffice.com</p>
+        </section>
+    </div>
     <footer>
         <p>&copy; 2025 مكتب محمود كمال حامد للمحاماة. تصميم مستقبلي لجميع الحقوق محفوظة.</p>
     </footer>
