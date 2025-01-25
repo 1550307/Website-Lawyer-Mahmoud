@@ -42,10 +42,11 @@
             padding: 8px 0;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
             position: relative;
-            top: -10px;
-            width: 100%;
+            top: -10px; /* Moves the strip upwards */
+            width: 100%; /* Ensures it spans the full width of the screen */
             transform: TranslateY(-120px);
         }
+
 
         nav a {
             color: white;
@@ -63,7 +64,7 @@
 
         section {
             max-width: 1200px;
-            margin: 10px auto;
+            margin: 10px auto; /* Reduced the top margin */
             padding: 20px;
             background-color: #643C0F;
             border-radius: 12px;
@@ -127,7 +128,7 @@
         }
 
         #news {
-            margin: 10px auto;
+            margin: 10px auto; /* Reduced the top margin */
             padding: 20px;
             background: linear-gradient(90deg, #C9A26B, #643C0F);
             border-radius: 12px;
@@ -145,25 +146,20 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
-            header p {
-                font-size: 1.1rem;
-            }
-
-            nav {
-                flex-direction: column;
-                padding: 15px 0;
-            }
-
-            nav a {
-                margin: 10px 0;
+            #motto {
                 font-size: 1.2rem;
             }
 
+            nav a {
+                font-size: 0.9rem;
+                margin: 0 10px;
+            }
+
             section h2 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             section p, section ul {
@@ -176,34 +172,27 @@
         }
 
         @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
+            nav {
+                flex-wrap: wrap;
             }
 
             nav a {
-                font-size: 1rem;
+                margin: 5px 10px;
+                font-size: 0.8rem;
             }
 
             .image-container img {
-                width: 100%;
                 height: auto;
             }
 
-            footer {
-                font-size: 0.7rem;
+            header img {
+                width: 60px;
+                height: auto;
             }
+        }
 
-            #services h2 {
-                font-size: 1.5rem;
-            }
-
-            section p, section ul {
-                font-size: 0.9rem;
-            }
+        #services {
+            text-align: center;
         }
     </style>
 </head>
@@ -211,9 +200,7 @@
     <header>
         <h1>مكتب</h1>
         <br>
-        <img src="images/download-removebg-preview.png" alt="scale" style="display: block; float: left; transform: TranslateY(-80px);">
-        <h1 style="font-size: 4rem; transform: translateX(-90px);">الدكتور/ محمود كمال حامد المحامي</h1>
-        <img src="images/download-removebg-preview.png" alt="scale" style="display: block; float: right; transform: TranslateY(-130px);">
+        <img src="images/download-removebg-preview.png" alt="scale" style="display: block; float: left; transform: TranslateY(-95px);"><h1 style="margin-right: 200px;"><h1 style="font-size: 3rem; transform: translateX(-90px);"> الدكتور/ محمود كمال حامد المحامي</h1><img src="images/download-removebg-preview.png" alt="scale" style="display: block; float: right; transform: TranslateY(-130px);">
         <p id="motto">العدالة هدفنا، والتقنية مستقبلنا</p>
     </header>
 
@@ -222,13 +209,12 @@
         <a href="#contact">تواصل معنا</a>
         <a href="#about">من نحن</a>
     </nav>
-
-    <div>
+    <div style="transform: TranslateY(-120px);">
         <section id="news">
             <h2>آخر أخبارنا</h2>
             <p>بحمد الله وتوفيقه، قد نجحنا اليوم في أخذ حكم تعويض قدره سبعميت ألف جنيه لصالح موكلنا السيد/إبرهيم علي حسن تعويضًا عن إصابته في حادث مروري.</p>
         </section>
-
+        <div>
         <section id="about">
             <h2>من نحن</h2>
             <div class="image-container">
@@ -255,9 +241,9 @@
             <p>البريد الإلكتروني: info@mahmoudlawoffice.com</p>
         </section>
     </div>
-
-    <footer>
+    <footer style="bottom: 0px; transform: translateY(120px);">
         <p>&copy; موقع مكتب الدكتور/ محمود كمال حامد، تصميم محمد كمال حامد، تنفيذ عبدالمحسن محمد كمال حامد، جميع الحقوق محفوظة 2025</p>
+
     </footer>
 </body>
 </html>
