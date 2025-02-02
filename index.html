@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmoud Kamal Hamed - Lawyer</title>
+    <title>مكتب د. محمود كمال حامد المحامي</title>
     <style>
         /* General page styling */
         body {
@@ -48,7 +48,7 @@
         /* News slider container */
         .news-slider {
             position: relative;
-            width: 80%;
+            width: 90%;
             margin: auto;
             overflow: hidden;
             white-space: nowrap;
@@ -64,13 +64,18 @@
             background: #D5C29B;
             color: #5a3e2b;
             border-radius: 10px;
-            animation: slideNews 10s linear infinite;
         }
         
-        /* Keyframe animation for sliding news */
+        /* Keyframe animation for sliding news with pauses */
         @keyframes slideNews {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-70%); }
+            0% { transform: translateX(-100%); }
+            40% { transform: translateX(0%); }
+            60% { transform: translateX(0%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .news-slide {
+            animation: slideNews 10s ease-in-out infinite;
         }
     </style>
 </head>
@@ -87,8 +92,7 @@
         <!-- News Section -->
         <h1 style="font-size: 50px;">آخر أخبارنا</h1>
         <div class="news-slider">
-            <div class="news-slide">لقد تمكنا من الحصول علي تعويض مجزي أمام محكمة تجاري شرق الاسكندريه لاحد عملائنا في مجال التصدير وذلك لاخلال الخصم وهي شركة شحن بحري بالاتفاق المبرم بينهما
-</div>
+            <div class="news-slide">لقد تمكنا من الحصول علي تعويض مجزي أمام محكمة تجاري شرق الاسكندريه لاحد عملائنا في مجال التصدير وذلك لاخلال الخصم وهي شركة شحن بحري بالاتفاق المبرم بينهما</div>
         </div>
         
         <!-- Practice Areas Section -->
